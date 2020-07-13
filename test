@@ -1,2 +1,16 @@
-#!/bin/bash
-env
+pipeline {
+ agent {
+   label 'aws-jenkins-slave-1'
+   
+ }
+   stages {
+ 
+      stage("Check") {
+        steps {
+          sh 'df -h'
+          sh 'cd /home/admin/ && ./berezka 12 31'
+        
+        }
+      }
+   }      
+}

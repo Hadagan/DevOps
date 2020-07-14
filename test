@@ -7,7 +7,7 @@ pipeline {
             steps {
               sh '''#!/bin/bash
               read PARAM_NAME
-              case --git in $PARAM_NAME)
+              case $1 in $PARAM_NAME)
               
               echo "ты выбрал git";;
               $PARAM_NAME)

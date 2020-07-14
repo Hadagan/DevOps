@@ -10,13 +10,13 @@ pipeline {
               echo "----------------------------------------------------"
               case "$PARAM_NAME" in 
               "--git")
-              --git
+              git
               ;;
               "--env")
-              --env
+              env
               ;;
               "--git --env")
-              --git & --env
+              git & env
               ;;
              
             esac

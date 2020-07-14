@@ -7,7 +7,7 @@ pipeline {
             steps {
               sh '''#!/bin/bash
               echo "ты выбрал $PARAM_NAME"
-              case in $PARAM_NAME '--git')
+              case in {$PARAM_NAME} '--git')
               pwd;;
               '--env')
               ls -la;;

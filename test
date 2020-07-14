@@ -8,7 +8,7 @@ pipeline {
               sh '''#!/bin/bash
               echo "ты выбрал $PARAM_NAME"
               
-              if [$PARAM_NAME == "--git" ]
+              if [$PARAM_NAME == ('--git') ]
               then
               pwd
               fi

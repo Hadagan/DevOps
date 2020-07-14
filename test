@@ -7,6 +7,23 @@ pipeline {
             steps {
               sh '''#!/bin/bash
               echo "ты выбрал $PARAM_NAME"
+              
+              switch(params.PARAM_NAME) {
+                        case '--git':
+                            echo "the choice 'git'"
+                            echo "${PARAM_NAME}"
+                            break;
+                        case '--env':
+                            echo "the choice 'env'"
+                            echo "${PARAM_NAME}"
+                            break;
+                        default:
+                            throw new RuntimeException("The error is here");
+                            break;
+                    }
+              
+              
+              
          '''
             }
         }

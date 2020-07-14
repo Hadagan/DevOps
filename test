@@ -11,10 +11,17 @@ pipeline {
               
               "--git")
               echo "ВЫ ВЫБРАЛИ GIT"
+              shift
               ;;
               "--env")
               echo "ВЫ ВЫБРАЛИ ENV"
+              shift
               ;;
+              "--git --env")
+              echo "ВЫ ВЫБРАЛИ GIT И ENV"
+              shift
+              ;;
+             
             esac
          '''
          

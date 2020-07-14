@@ -7,27 +7,10 @@ pipeline {
             steps {
               sh '''#!/bin/bash
               echo "ты выбрал $PARAM_NAME"
-              
-              
-              printf 'Какой Linux дистрибутив Вы знаете? '
-read DISTR
-
-case $DISTR in
-     ubuntu)
-          echo "Я тоже знаю Ubuntu! Эта система основана на Debian."
-          ;;
-     centos|rhel)
-          echo "Эй! Это мой любимый серверный дистрибутив!"
-          ;;
-     windows)
-          echo "Очень смешно..."
-          ;; 
-     *)
-          echo "Хмм, кажется я никогда не использовал этот дистрибутив."
-          ;;
-esac
-              
-              
+              case "$1" in $PARAM_NAME)
+              pwd
+              shift
+              ;;
               
          '''
             }

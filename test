@@ -9,7 +9,7 @@ pipeline {
               read PARAM_NAME
               case $1 in $PARAM_NAME)
               echo "ты выбрал git";;
-              $2 in $PARAM_NAME)
+              $2 == $PARAM_NAME)
               echo "ты выбрал env";;
               esac
          '''

@@ -9,10 +9,7 @@ pipeline {
       steps {
       
        bash '''#!/bin/bash
-        while [ $# == ${PARAM_NAME} ] ; do
-        echo "$1"
-        shift
-        done
+        echo "Hello"
         '''
         
         }

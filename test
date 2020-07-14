@@ -6,7 +6,7 @@ pipeline {
         stage('Example') {
             steps {
               sh '''#!/bin/bash
-                 while [ $# -ne 0 ] ; do
+                 while [ $# == ${PARAM_NAME} ] ; do
                 echo "$1"
                 shift
                 done

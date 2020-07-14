@@ -8,7 +8,7 @@ pipeline {
               sh '''#!/bin/bash
               echo "ты выбрал $PARAM_NAME"
             case $1 in 
-            $PARAM_NAME)
+            $2)
             pwd;;
              
              esac

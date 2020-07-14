@@ -10,7 +10,9 @@ pipeline {
               echo "----------------------------------------------------"
               case "$PARAM_NAME" in 
               "--git")
-              git
+              cd /home/admin
+              git > keeep
+              cat keeep
               ;;
               "--env")
               env

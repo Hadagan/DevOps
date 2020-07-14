@@ -1,19 +1,14 @@
 pipeline {
  agent {
    label 'aws-jenkins-slave-1'
-   
  }
    
- 
-      stage("Run") {
-      steps {
-      
-       bash '''#!/bin/bash
-        echo "Hello"
-        '''
-        
-        }
-      }
-    }  
-
+  stage('Setting the variables values') {
+    steps {
+         bash '''#!/bin/bash
+                 echo "hello world" 
+         '''
+    }
+    }
+}
 

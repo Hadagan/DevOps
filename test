@@ -10,7 +10,7 @@ pipeline {
               case $1 in $PARAM_NAME)
               
               echo "ты выбрал git";;
-              $PARAM_NAME)
+              $2)
               echo "ты выбрал env";;
               esac
          '''

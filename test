@@ -7,11 +7,11 @@ pipeline {
             steps {
               sh '''#!/bin/bash
               echo "ты выбрал $PARAM_NAME"
-              case "$1" == $PARAM_NAME)
-              pwd
-              shift
-              ;;
               
+              if [$PARAM_NAME == $1]
+              then
+              pwd
+              fi
          '''
             }
      

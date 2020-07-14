@@ -8,9 +8,10 @@ pipeline {
               sh '''#!/bin/bash
               read PARAM_NAME
               case $1 in $PARAM_NAME)
-              
+              shift
               echo "ты выбрал git";;
               $2)
+              shift
               echo "ты выбрал env";;
               esac
          '''

@@ -5,9 +5,9 @@ pipeline {
       stages { 
         stage('Example') {
             steps {
-            sh 'cd /home/admin/DevOps'
             sh './berezka'
-         
+            case "$1" in
+            
          }
      }
   }   

@@ -6,7 +6,10 @@ pipeline {
         stage('Example') {
             steps {
               sh '''#!/bin/bash
-                 echo "hello world" 
+                 while [ $# -ne 0 ] ; do
+                echo "$1"
+                shift
+                done
          '''
             }
         }

@@ -6,8 +6,8 @@ pipeline {
         stage('Example') {
             steps {
               sh '''#!/bin/bash
-              read 1
-              case "$1" in --git)
+              read PARAM_NAME
+              case "$PARAM_NAME" in --git)
               echo "ты выбрал git";;
               --env)
               echo "ты выбрал env";;

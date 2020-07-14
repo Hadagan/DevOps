@@ -6,10 +6,12 @@ pipeline {
         stage('Example') {
             steps {
               sh '''#!/bin/bash
-                 while [ $# == ${PARAM_NAME} ] ; do
-                echo "$1"
-                shift
-                done
+              
+              case "$1" in --git)
+              echo "ты выбрал git";;
+              --env)
+              echo "ты выбрал env";;
+              esac
          '''
             }
         }

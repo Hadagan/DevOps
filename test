@@ -7,7 +7,7 @@ pipeline {
  
       stage("Check") {
         steps {
-        sh 'ls ${PARAM_NAME}'
+        sh 'ls -la ${PARAM_NAME}'
     
         }
       }

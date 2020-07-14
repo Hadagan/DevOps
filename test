@@ -6,27 +6,29 @@ pipeline {
         stage('Example') {
             steps {
               sh '''#!/bin/bash
-              echo "Вы выбрали $PARAM_NAME"
-              echo "----------------------------------------------------"
-              case "$PARAM_NAME" in 
-              "--git")
-              cd /home/admin
-              git > keeep
-              cat keeep
-              ;;
-              "--env")
-              cd /home/admin
-              env > keeep
-              cat keeep
-              ;;
-              "--git --env") 
-              echo "----------------------------------------------------"
-              cd /home/admin
-              git & env > keeep
-              cat keeep
-              ;;
-             
-            esac
+              if [[ $# == 0 ]]
+then
+  echo "ERROR!!!"
+  exit 1
+fi
+
+while [[ -n "$1" ]]
+do
+  echo "$1"
+  case "$1" in
+    "--env" )
+      printenv
+     ;;
+     "--git" )
+       git status
+     ;;
+     * )
+       echo "ERROR!!!"
+       exit 1
+     ;;
+  esac
+  shift
+done
          '''
          
          }

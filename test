@@ -9,8 +9,11 @@ pipeline {
               echo "ты выбрал $PARAM_NAME"
               case "$1" in 
               
-              '--git')
+              "--git")
               echo "ВЫ ВЫБРАЛИ GIT"
+              ;;
+              "--env")
+              echo "ВЫ ВЫБРАЛИ ENV"
               ;;
             esac
          '''

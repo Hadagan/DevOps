@@ -5,10 +5,14 @@ pipeline {
  }
    stages {
  
-      stage("Check") {
+      stage("Run") {
+       bash '''#!/bin/bash
         steps {
-        echo "${PARAM_NAME}"
-    
+        while [ $# -ne 0 ] ; do
+        echo "$1"
+        shift
+        done
+        '''
         }
       }
    }      

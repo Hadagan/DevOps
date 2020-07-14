@@ -6,20 +6,17 @@ pipeline {
         stage('Example') {
             steps {
               sh '''#!/bin/bash
-              echo "ты выбрал $PARAM_NAME"
+              echo "Вы выбрали $PARAM_NAME"
+              echo "----------------------------------------------------"
               case "$PARAM_NAME" in 
-              
               "--git")
-              echo "ВЫ ВЫБРАЛИ GIT"
-              shift
+              --git
               ;;
               "--env")
-              echo "ВЫ ВЫБРАЛИ ENV"
-              shift
+              --env
               ;;
               "--git --env")
-              echo "ВЫ ВЫБРАЛИ GIT И ENV"
-              shift
+              --git & --env
               ;;
              
             esac

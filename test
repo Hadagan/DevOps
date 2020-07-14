@@ -7,9 +7,9 @@ pipeline {
             steps {
               sh '''#!/bin/bash
               echo "ты выбрал $PARAM_NAME"
-            case $1 in 
-            $2)
-            pwd;;
+            case $1 in $2)
+            echo "$1"
+            ;;
              
              esac
          '''

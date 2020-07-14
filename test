@@ -8,7 +8,7 @@ pipeline {
               sh '''#!/bin/bash
               echo "ты выбрал $PARAM_NAME"
             case "$1" in 
-            "$2") return $PARAM_NAME;;
+            "$2");;
              esac
          '''
          }

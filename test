@@ -7,8 +7,7 @@ pipeline {
  
       stage("Check") {
         steps {
-          sh 'df -h'
-          sh 'cd /home/admin/ && ./berezka 1996 2020'
+         sh 'echo "${PARAM_NAME}"'
         }
       }
    }      

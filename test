@@ -15,12 +15,13 @@ pipeline {
               cat keeep
               ;;
               "--env")
-              env
+              cd /home/admin
+              env > keeep
+              cat keeep
               ;;
-              "--git --env")
-              git 
+              "--git --env") 
               echo "----------------------------------------------------"
-              env
+              git & env > keep
               ;;
              
             esac

@@ -7,7 +7,7 @@ pipeline {
             steps {
               sh '''#!/bin/bash
               echo "ты выбрал $PARAM_NAME"
-              if [$PARAM_NAME == "--git"]; then
+              if [$PARAM_NAME === "--git"]; then
               echo "СРАБОТАЛО ТЫ ВЫБРАЛ GIT"
               fi
             

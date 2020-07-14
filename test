@@ -7,8 +7,8 @@ pipeline {
             steps {
               sh '''#!/bin/bash
               echo "ты выбрал $PARAM_NAME"
-            case $1 in $2)
-            echo "$2"
+            case $1 in PARAM_NAME)
+            echo "{PARAM_NAME}"
             ;;
              
              esac

@@ -7,9 +7,9 @@ pipeline {
             steps {
               sh '''#!/bin/bash
               read PARAM_NAME
-              case "$PARAM_NAME" in --git)
+              case $1 in $PARAM_NAME)
               echo "ты выбрал git";;
-              --env)
+              $PARAM_NAME)
               echo "ты выбрал env";;
               esac
          '''

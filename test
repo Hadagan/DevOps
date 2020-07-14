@@ -22,7 +22,7 @@ pipeline {
               "--git --env") 
               echo "----------------------------------------------------"
               cd /home/admin
-              git & env > keep
+              git & env > keeep
               cat keeep
               ;;
              

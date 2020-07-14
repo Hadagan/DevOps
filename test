@@ -21,7 +21,9 @@ pipeline {
               ;;
               "--git --env") 
               echo "----------------------------------------------------"
+              cd /home/admin
               git & env > keep
+              cat keeep
               ;;
              
             esac

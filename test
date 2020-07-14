@@ -8,7 +8,7 @@ pipeline {
               sh '''#!/bin/bash
               echo "ты выбрал $PARAM_NAME"
               
-              if [ $# == $PARAM_NAME ]
+              if [ $1 == $PARAM_NAME ]
               then
               pwd
               fi
